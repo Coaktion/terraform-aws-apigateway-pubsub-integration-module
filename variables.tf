@@ -30,45 +30,45 @@ variable "fifo" {
 
 variable "authorization" {
   description = "Authorization type for API Gateway method"
-  type = string
-  default = "NONE"
+  type        = string
+  default     = "NONE"
 }
 
 variable "path_integration" {
   description = "Path for API Gateway integration"
-  type = string
-  default = "sns"
+  type        = string
+  default     = "sns"
 }
 
 variable "path_method" {
   description = "Path for API Gateway method"
-  type = string
-  default = "POST"
+  type        = string
+  default     = "POST"
 }
 
 variable "stage_name" {
   description = "Stage name for API Gateway deployment"
-  type = string
-  default = "prod"
+  type        = string
+  default     = "prod"
 }
 
 variable "topic" {
   description = "Topic name for API Gateway integration"
-  type = string
+  type        = string
 }
 
 variable "queue" {
   description = "Queue name for API Gateway integration"
-  type = string
+  type        = string
 }
 
 variable "api_name" {
   description = "API name for API Gateway integration"
-  type = string
+  type        = string
 }
 
 variable "api_description" {
   description = "API description for API Gateway integration"
-  type = string
-  default = "API Gateway integration for SNS"
+  type        = string
+  default     = "API Gateway integration for SNS"
 }

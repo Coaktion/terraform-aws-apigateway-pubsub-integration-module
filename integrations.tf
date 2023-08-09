@@ -1,5 +1,5 @@
 locals {
-  request_parse = "Action=Publish&TopicArn=$util.urlEncode('${local.topic_arn}')&Message=$util.urlEncode($input.body)"
+  request_parse   = "Action=Publish&TopicArn=$util.urlEncode('${local.topic_arn}')&Message=$util.urlEncode($input.body)"
   request_mapping = var.fifo ? "${local.request_parse}&MessageGroupId=$context.requestId" : local.request_parse
 }
 

@@ -16,10 +16,10 @@ resource "aws_iam_role" "sns_integration_role" {
 
   tags = var.default_tags
 
-  depends_on = [ module.pubsub ]
+  depends_on = [module.pubsub]
 
   lifecycle {
-    ignore_changes = [ tags ]
+    ignore_changes = [tags]
   }
 }
 
@@ -34,13 +34,13 @@ resource "aws_iam_policy" "sns_publish_policy" {
           "sns:Publish"
         ]
         Resource = [
-            local.topic_arn
+          local.topic_arn
         ]
       }
     ]
   })
 
-  depends_on = [ module.pubsub ]
+  depends_on = [module.pubsub]
 }
 
 resource "aws_iam_role_policy_attachment" "sns_integration_policy" {
