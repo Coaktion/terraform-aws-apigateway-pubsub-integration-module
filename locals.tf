@@ -11,7 +11,8 @@ locals {
       name = var.queue
       topics_to_subscribe = [
         {
-          name = var.topic
+          name          = var.topic
+          filter_policy = var.filter_policy
         }
       ]
     }

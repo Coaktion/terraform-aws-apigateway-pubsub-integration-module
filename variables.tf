@@ -72,3 +72,9 @@ variable "api_description" {
   type        = string
   default     = "API Gateway integration for SNS"
 }
+
+variable "filter_policy" {
+  description = "Filter Policy"
+  type        = map(string)
+  default     = {}
+}
