@@ -34,11 +34,11 @@ provider "aws" {
 }
 
 module "aws_api_gateway_integration" {
-  source     = "../"
-  topic      = "validation_topic"
-  queue      = "validation_queue"
-  account_id = "000000000000"
-  fifo       = true
-  api_name   = "teste_tinoco_sns"
+  source          = "../"
+  topic           = "validation_topic"
+  queue           = "validation_queue"
+  account_id      = "000000000000"
+  fifo            = true
+  api_name        = "teste_tinoco_sns"
   resource_prefix = "app_tinoco"
 }
