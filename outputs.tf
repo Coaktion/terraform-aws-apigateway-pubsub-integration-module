@@ -10,5 +10,5 @@ output "api_integration" {
 
 output "pubsub" {
   description = "PubSub module"
-  value = module.pubsub
+  value       = module.pubsub
 }
