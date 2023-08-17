@@ -7,3 +7,8 @@ output "api_integration" {
     integration = aws_api_gateway_integration.integration.id
   }
 }
+
+output "pubsub" {
+  description = "PubSub module"
+  value = module.pubsub
+}

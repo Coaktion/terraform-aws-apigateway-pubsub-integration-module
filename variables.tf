@@ -75,6 +75,6 @@ variable "api_description" {
 
 variable "filter_policy" {
   description = "Filter Policy"
-  type        = map(string)
+  type        = map(list(string))
   default     = {}
 }
