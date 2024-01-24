@@ -1,5 +1,5 @@
 module "pubsub" {
-  source          = "github.com/Coaktion/terraform-aws-apigateway-pubsub-integration-module"
+  source          = "github.com/Coaktion/terraform-aws-pubsub-module"
   queues          = local.queues
   topics          = local.topics
   fifo            = var.fifo
