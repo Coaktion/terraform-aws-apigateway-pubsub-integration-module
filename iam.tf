@@ -1,5 +1,5 @@
 resource "aws_iam_role" "sns_integration_role" {
-  name = "${var.resource_prefix}__sns_integration_role"
+  name = "${var.api_name}__sns_integration_role"
 
   assume_role_policy = jsonencode({
     "Version" : "2012-10-17",
@@ -24,7 +24,7 @@ resource "aws_iam_role" "sns_integration_role" {
 }
 
 resource "aws_iam_policy" "sns_publish_policy" {
-  name = "${var.resource_prefix}__sns_publish_policy"
+  name = "${var.api_name}__sns_publish_policy"
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
