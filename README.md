@@ -10,7 +10,7 @@ provider "aws" {
 }
 
 module "aws_api_gateway_integration" {
-  source     = "github.com/paulo-tinoco/terraform-apigateway-pubsub-integration"
+  source     = "github.com/Coaktion/terraform-aws-apigateway-pubsub-integration-module"
   topic      = "validation_topic"
   queue      = "validation_queue"
   account_id = "000000000000"
